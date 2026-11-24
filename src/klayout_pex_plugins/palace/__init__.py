@@ -3,8 +3,8 @@
 # SPDX-FileCopyrightText: 2026 Martin Jan Köhler and Harald Pretl
 # Johannes Kepler University, Institute for Integrated Circuits.
 #
-# This file is part of klayout-pex-plugin-palace
-# (see https://github.com/iic-jku/klayout-pex-plugin-palace).
+# This file is part of kpex-plugin-palace
+# (see https://github.com/iic-jku/kpex-plugin-palace).
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -22,7 +22,7 @@
 # --------------------------------------------------------------------------------
 #
 
-"""Palace electrostatic decks from PEX25D scenes: the KLayout-PEX exporter ``palace``."""
+"""Palace electrostatic decks from PEX25D scenes: the KPEX exporter ``palace``."""
 
 from .exporter import PalaceExporterOptions, PalaceSceneExporter, palace_config
 

@@ -3,8 +3,8 @@
 ## SPDX-FileCopyrightText: 2026 Martin Jan Köhler and Harald Pretl
 ## Johannes Kepler University, Institute for Integrated Circuits.
 ##
-## This file is part of klayout-pex-plugin-palace
-## (see https://github.com/iic-jku/klayout-pex-plugin-palace).
+## This file is part of kpex-plugin-palace
+## (see https://github.com/iic-jku/kpex-plugin-palace).
 ##
 ## This program is free software: you can redistribute it and/or modify
 ## it under the terms of the GNU General Public License as published by
@@ -22,8 +22,8 @@
 ## --------------------------------------------------------------------------------
 ##
 
-# Tests and releases of this repository. The KLayout-PEX Allure and coverage pages
-# get their plugin results from klayout-pex's own CI, which runs these tests too.
+# Tests and releases of this repository. The KPEX Allure and coverage pages
+# get their plugin results from KPEX core CI, which runs these tests too.
 
 name: CI
 
@@ -58,7 +58,7 @@ jobs:
     defaults:
       run:
         shell: bash
-        working-directory: klayout-pex-plugin-palace
+        working-directory: kpex-plugin-palace
 
     env:
       KPEX_KLAYOUT_EXE: /nonexistent
@@ -69,7 +69,7 @@ jobs:
     steps:
     - uses: actions/checkout@v7
       with:
-        path: klayout-pex-plugin-palace
+        path: kpex-plugin-palace
 
     - name: "[🐍] Setup python ${{ matrix.python-version }}"
       uses: actions/setup-python@v7

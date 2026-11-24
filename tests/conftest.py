@@ -3,8 +3,8 @@
 # SPDX-FileCopyrightText: 2026 Martin Jan Köhler and Harald Pretl
 # Johannes Kepler University, Institute for Integrated Circuits.
 #
-# This file is part of klayout-pex-plugin-palace
-# (see https://github.com/iic-jku/klayout-pex-plugin-palace).
+# This file is part of kpex-plugin-palace
+# (see https://github.com/iic-jku/kpex-plugin-palace).
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -35,19 +35,19 @@ from pathlib import Path
 
 import pytest
 
-from klayout_pex import pex25d
+from kpex import pex25d
 
 DATA = Path(__file__).parent.parent / 'testdata'
 
 
 def pytest_collection_modifyitems(items):
     """
-    Group these tests on the KLayout-PEX Allure page, whose CI runs them too.
+    Group these tests on the KPEX Allure page, whose CI runs them too.
     Labels as marks, so that tests skipped before their fixtures run get them too.
     """
     for item in items:
         for label_type, value in (('parentSuite', 'Plugin Tests'),
-                                  ('suite', 'klayout-pex-plugin-palace'),
+                                  ('suite', 'kpex-plugin-palace'),
                                   ('subSuite', item.module.__name__.rsplit('.', 1)[-1])):
             item.add_marker(pytest.mark.allure_label(value, label_type=label_type))
 

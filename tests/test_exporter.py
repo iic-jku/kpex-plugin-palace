@@ -3,8 +3,8 @@
 # SPDX-FileCopyrightText: 2026 Martin Jan Köhler and Harald Pretl
 # Johannes Kepler University, Institute for Integrated Circuits.
 #
-# This file is part of klayout-pex-plugin-palace
-# (see https://github.com/iic-jku/klayout-pex-plugin-palace).
+# This file is part of kpex-plugin-palace
+# (see https://github.com/iic-jku/kpex-plugin-palace).
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -34,7 +34,7 @@ import subprocess
 
 import pytest
 
-from klayout_pex import pex25d
+from kpex import pex25d
 
 
 def export(scene, tmp_path: Path, **options):
@@ -45,7 +45,7 @@ def export(scene, tmp_path: Path, **options):
 
 def test_registered_as_exporter_plugin():
     info = pex25d.exporter_registry().get_info('palace')
-    assert info.distribution == 'klayout-pex-plugin-palace'
+    assert info.distribution == 'kpex-plugin-palace'
     assert info.target == 'klayout_pex_plugins.palace:create_exporter'
 
 

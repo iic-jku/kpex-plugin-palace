@@ -1,7 +1,7 @@
 [project]
-name = "klayout-pex-plugin-palace"
-version = "0.2.0"
-description = "Palace electrostatic input from KLayout-PEX PEX25D scenes: capacitance matrices by FEM"
+name = "kpex-plugin-palace"
+version = "0.3.0"
+description = "Palace electrostatic input from KPEX PEX25D scenes: capacitance matrices by FEM"
 authors = [{ name = "Martin Köhler", email = "info@martinjankoehler.com" }]
 license = "GPL-3.0-or-later"
 readme = "README.md"
@@ -14,12 +14,12 @@ classifiers = [
     "Topic :: Scientific/Engineering :: Electronic Design Automation (EDA)",
 ]
 dependencies = [
-    "klayout-pex>=0.10.0,<1",
-    "klayout-pex-plugin-gmsh>=0.2.0,<0.3",
+    "kpex>=0.12.0,<1",
+    "kpex-plugin-gmsh>=0.3.0,<0.4",
 ]
 
 [project.urls]
-repository = "https://github.com/iic-jku/klayout-pex-plugin-palace"
+repository = "https://github.com/iic-jku/kpex-plugin-palace"
 
 [project.entry-points."klayout_pex.exporters.v1"]
 palace = "klayout_pex_plugins.palace:create_exporter"
