@@ -3,8 +3,8 @@
 # SPDX-FileCopyrightText: 2026 Martin Jan Köhler and Harald Pretl
 # Johannes Kepler University, Institute for Integrated Circuits.
 #
-# This file is part of klayout-pex-plugin-palace
-# (see https://github.com/iic-jku/klayout-pex-plugin-palace).
+# This file is part of kpex-plugin-palace
+# (see https://github.com/iic-jku/kpex-plugin-palace).
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -38,13 +38,13 @@ import json
 import os
 from typing import TYPE_CHECKING, Any, ClassVar, FrozenSet, Dict, List, Mapping, Optional
 
-from klayout_pex.log import info
-from klayout_pex.plugin_api.v1 import PEX25DSceneExporter, SceneCapability, require_scene_capabilities
+from kpex.log import info
+from kpex.plugin_api.v1 import PEX25DSceneExporter, SceneCapability, require_scene_capabilities
 from klayout_pex_plugins.gmsh import (LENGTH_UNIT_M, GmshMeshOptions, GmshSceneExporter, MeshResult,
                                       parse_options, write_mesh)
 
 if TYPE_CHECKING:
-    from klayout_pex_protobuf.kpex.pex25d.pex25d_scene_pb2 import PEX25DScene
+    from kpex_protobuf.kpex.pex25d.pex25d_scene_pb2 import PEX25DScene
 
 OUTER_BOUNDARY_CONDITIONS = {'zero_charge': 'ZeroCharge', 'ground': 'Ground'}
 

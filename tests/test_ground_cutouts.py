@@ -3,8 +3,8 @@
 # SPDX-FileCopyrightText: 2026 Martin Jan Köhler and Harald Pretl
 # Johannes Kepler University, Institute for Integrated Circuits.
 #
-# This file is part of klayout-pex-plugin-palace
-# (see https://github.com/iic-jku/klayout-pex-plugin-palace).
+# This file is part of kpex-plugin-palace
+# (see https://github.com/iic-jku/kpex-plugin-palace).
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -34,8 +34,8 @@ from unittest.mock import patch
 
 import pytest
 
-from klayout_pex import pex25d
-from klayout_pex.plugin_api.v1 import SceneCapability
+from kpex import pex25d
+from kpex.plugin_api.v1 import SceneCapability
 from klayout_pex_plugins.gmsh import GmshSceneExporter
 from klayout_pex_plugins.palace.exporter import PalaceSceneExporter
 from .conftest import DATA
@@ -164,7 +164,7 @@ def test_backend_accounting_support_is_not_forwarded():
 
 @pytest.mark.parametrize('direct', [False, True])
 def test_accounting_is_rejected_before_output(tmp_path: Path, direct: bool):
-    from klayout_pex_protobuf.kpex.pex25d.pex25d_capabilities_pb2 import REQUIRED_CAPABILITY_CAPACITANCE_ACCOUNTING
+    from kpex_protobuf.kpex.pex25d.pex25d_capabilities_pb2 import REQUIRED_CAPABILITY_CAPACITANCE_ACCOUNTING
     original = scene()
     original.required_capabilities.append(REQUIRED_CAPABILITY_CAPACITANCE_ACCOUNTING)
     before = original.SerializeToString(deterministic=True)
